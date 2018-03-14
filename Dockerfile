@@ -11,7 +11,6 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-
 FROM alpine:2.6
 MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
@@ -23,8 +22,14 @@ sed -i 's~^\([[:blank:]]*\)AllowOverride none.*$~\1AllowOverride All~' /etc/apac
 echo "Success"
 
 EXPOSE 80
-
-# VOLUME /app
-WORKDIR /app
-
+# WORKDIR /app
 COPY . /var/www/html/
+
+# Vulnerability Advisor : Fix PASS_MAX_DAYS, PASS_MIN_DAYS and PASS_MIN_LEN, common-password
+# RUN mv -f /etc/login.defs /etc/login.defs.orig
+# RUN sed 's/^PASS_MAX_DAYS.*/PASS_MAX_DAYS 90/' /etc/login.defs.orig > /etc/login.defs
+# RUN grep -q '^PASS_MIN_DAYS' /etc/login.defs && sed -i 's/^PASS_MIN_DAYS.*/PASS_MIN_DAYS 1/' /etc/login.defs || echo 'PASS_MIN_DAYS 1\n' >> /etc/login.defs
+# RUN grep -q '^PASS_MIN_LEN' /etc/login.defs && sed -i 's/^PASS_MIN_LEN.*/PASS_MIN_LEN 8/' /etc/login.defs || echo 'PASS_MIN_LEN 9\n' >> /etc/login.defs
+# RUN grep -q '^password.*required' /etc/pam.d/common-password && sed -i 's/^password.*required.*/password    required            pam_permit.so minlen=9/' /etc/pam.d/common-password || echo 'password    required            pam_permit.so minlen=9' >> /etc/pam.d/common-password
+# # Vulnerability Advisor : Temporarily remove a specific <package> that was discovered vulnerable
+# RUN dpkg --purge --force-all gcc-6
