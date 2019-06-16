@@ -1,7 +1,4 @@
 #!/bin/bash
-export PATH=/opt/IBM/node-v6.7.0/bin:$PATH
-npm install
-npm install -g grunt-idra3
-
-idra --publishtestresult --filelocation=./tests/xunit.xml --type=unittest
-idra --publishtestresult --filelocation=./tests/Cobertura.xml --type=code
+ibmcloud login --apikey $IBM_CLOUD_API_KEY --no-region
+ibmcloud doi publishtestrecord --logicalappname="$APP_NAME" --buildnumber=$BUILD_NUMBER --filelocation=./tests/xunit.xml --type=unittest
+ibmcloud doi publishtestrecord --logicalappname="$APP_NAME" --buildnumber=$BUILD_NUMBER --filelocation=./tests/Cobertura.xml --type=code
