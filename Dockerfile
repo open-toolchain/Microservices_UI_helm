@@ -12,7 +12,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-FROM php:5.6.34-apache
+FROM php:apache
 
 EXPOSE 80
 COPY . /var/www/html/
