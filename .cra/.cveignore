@@ -1,28 +1,22 @@
 [
     {
-        "cve": "CVE-2021-31618",
-        "expiration": "2021-08-31T22:08:41+04:00",
-        "comment": "Fixed in Version: 2.4.38-3+deb10u5 .Waiting for upstream dependency to include fix in php:apache. "
+        "cve": "SNYK-JS-UNDERSCORESTRING-12168",
+        "alwaysOmit": true
     },
     {
-        "cve": "CVE-2021-26690",
-        "expiration": "2021-08-31T22:08:41+04:00",
-        "comment": "Fixed in Version: 2.4.38-3+deb10u5 .Waiting for upstream dependency to include fix in php:apache. "
+        "cve": "SNYK-JS-SHELLJS-2332187",
+        "alwaysOmit": true
     },
     {
-        "cve": "CVE-2020-35452",
-        "expiration": "2021-08-31T22:08:41+04:00",
-        "comment": "Fixed in Version: 2.4.38-3+deb10u5 .Waiting for upstream dependency to include fix in php:apache. "
+        "cve": "SNYK-JS-NANOID-2332193",
+        "alwaysOmit": true
     },
     {
-        "cve": "CVE-2021-26691",
-        "expiration": "2021-08-31T22:08:41+04:00",
-        "comment": "Fixed in Version: 2.4.38-3+deb10u5 .Waiting for upstream dependency to include fix in php:apache. "
+        "cve": "SNYK-DEBIAN11-APACHE2-2322060",
+        "alwaysOmit": true
     },
     {
-        "cve": "CVE-2021-30641",
-        "expiration": "2021-08-31T22:08:41+04:00",
-        "comment": "Fixed in Version: 2.4.38-3+deb10u5 .Waiting for upstream dependency to include fix in php:apache. "
+        "cve": "SNYK-DEBIAN11-APACHE2-2322055",
+        "alwaysOmit": true
     }
-
 ]
