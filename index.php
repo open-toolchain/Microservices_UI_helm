@@ -71,7 +71,7 @@ function orderItem(itemID){
 	        	alert("Failure: check that your JavaOrders API App is running and your user-provided service has the correct URL.");
 	        }
 	        else{
-	        	alert("Order Submitted! Check your Java Orders API to see your orders: \n" + result.ordersURL);
+	        	alert("Order Submitted! Check your Java Orders API to see your orders.\n");
 	        }
 	    },
 	    error: function(XMLHttpRequest, textStatus, errorThrown) { 
@@ -102,4 +102,3 @@ function orderItem(itemID){
 	<a href="./autoLoadTest.html">Catalog Load Tester</a>
 </body>
 </html>
-
