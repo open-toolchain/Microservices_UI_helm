@@ -1,22 +1,6 @@
 [
     {
-        "cve": "SNYK-JS-UNDERSCORESTRING-12168",
-        "alwaysOmit": true
-    },
-    {
-        "cve": "SNYK-JS-SHELLJS-2332187",
-        "alwaysOmit": true
-    },
-    {
-        "cve": "SNYK-JS-NANOID-2332193",
-        "alwaysOmit": true
-    },
-    {
-        "cve": "SNYK-DEBIAN11-APACHE2-2322060",
-        "alwaysOmit": true
-    },
-    {
-        "cve": "SNYK-DEBIAN11-APACHE2-2322055",
+        "cve": "SNYK-DEBIAN11-GZIP-2444256",
         "alwaysOmit": true
     }
 ]
