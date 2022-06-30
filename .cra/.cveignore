@@ -1,6 +1,6 @@
 [
     {
-        "cve": "SNYK-DEBIAN11-GZIP-2444256",
+        "cve": "SNYK-DEBIAN11-OPENSSL-2933518",
         "alwaysOmit": true
     }
 ]
