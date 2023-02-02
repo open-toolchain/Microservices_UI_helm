@@ -2,5 +2,13 @@
     {
         "cve": "SNYK-DEBIAN11-OPENSSL-2933518",
         "alwaysOmit": true
+    },
+    {
+        "cve": "SNYK-DEBIAN11-CURL-3179186",
+        "alwaysOmit": true
+    },
+    {
+        "cve": "SNYK-DEBIAN11-CURL-3065656",
+        "alwaysOmit": true
     }
 ]
